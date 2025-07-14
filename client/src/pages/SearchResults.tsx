@@ -1,10 +1,5 @@
-<<<<<<< HEAD:client/src/pages/SearchResults.tsx
 import { useState, useEffect } from "react";
 import { useSearch } from "wouter";
-=======
-import { useState, useEffect, useMemo } from "react";
-import { useSearchParams } from "react-router-dom";
->>>>>>> d8d2d33c1cae20c684541c15e19fe117a0da03fe:src/pages/SearchResults.tsx
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PropertyCard from "@/components/PropertyCard";
@@ -13,14 +8,10 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MapPin, SlidersHorizontal, Grid, List, Filter, Map, Bookmark, Share2 } from "lucide-react";
 import { combinedProperties } from "@/data/properties";
+import { cn } from "@/lib/utils";
 
 const SearchResults = () => {
-<<<<<<< HEAD:client/src/pages/SearchResults.tsx
   const search = useSearch();
-  const [filteredProperties, setFilteredProperties] = useState(combinedProperties);
-=======
-  const [searchParams] = useSearchParams();
->>>>>>> d8d2d33c1cae20c684541c15e19fe117a0da03fe:src/pages/SearchResults.tsx
   const [showFilters, setShowFilters] = useState(false);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [sortBy, setSortBy] = useState("relevance");
@@ -94,13 +85,9 @@ const SearchResults = () => {
       allProps = allProps.filter(property => property.verified);
     }
 
-    if (filters.city && filters.city !== 'all') {
-      filtered = filtered.filter(property => property.city === filters.city);
-    }
-
     // Apply price range filter
     if (filters.priceRange) {
-      filtered = filtered.filter(property => {
+      allProps = allProps.filter((property: any) => {
         const priceStr = property.price.replace(/[₹,\s]/g, '');
         let price = 0;
         if (priceStr.includes('Cr')) {
@@ -289,7 +276,7 @@ const SearchResults = () => {
                     ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                     : "space-y-4"
                 }>
-                  {filteredProperties.map((property) => (
+                  {filteredProperties.map((property: any) => (
                     <PropertyCard 
                       key={property.id} 
                       property={property}
