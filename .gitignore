@@ -1,0 +1,15 @@
+node_modules
+dist
+.DS_Store
+<<<<<<< HEAD
+server/public
+vite.config.ts.*
+*.tar.gz
+=======
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.env
+>>>>>>> d8d2d33c1cae20c684541c15e19fe117a0da03fe
