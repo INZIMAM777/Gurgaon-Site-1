@@ -1,15 +1,9 @@
 import PropertyCard from "./PropertyCard";
-<<<<<<< HEAD:client/src/components/FeaturedProjects.tsx
-import { ArrowRight } from "lucide-react";
-import { allProperties } from "@/data/properties";
-import { Link } from "wouter";
-=======
 import { ArrowRight, TrendingUp, MapPin, Filter, Grid, List } from "lucide-react";
 import { combinedProperties } from "@/data/properties";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { Link } from "react-router-dom";
->>>>>>> d8d2d33c1cae20c684541c15e19fe117a0da03fe:src/components/FeaturedProjects.tsx
+import { Link } from "wouter";
 
 // Use imported property data
 const recommendedProjects = combinedProperties.slice(0, 12);
@@ -174,17 +168,9 @@ const FeaturedProjects = () => {
         </div>
 
         <div className="text-center">
-<<<<<<< HEAD:client/src/components/FeaturedProjects.tsx
           <Link to="/more-projects" className="flex items-center gap-2 mx-auto text-primary hover:text-primary/80 font-medium w-fit">
             <span>View More Projects</span>
             <ArrowRight className="h-4 w-4" />
-=======
-          <Link to="/more-projects">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg">
-              View All {combinedProperties.length}+ Properties
-              <ArrowRight className="h-5 w-5 ml-2" />
-            </Button>
->>>>>>> d8d2d33c1cae20c684541c15e19fe117a0da03fe:src/components/FeaturedProjects.tsx
           </Link>
         </div>
       </section>
