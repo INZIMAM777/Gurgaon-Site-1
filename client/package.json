@@ -1,0 +1,40 @@
+{
+  "name": "gurgaon-site-client",
+  "version": "1.0.0",
+  "description": "Frontend for Gurgaon property site",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "react": "^18.20",
+    "react-dom": "^18.2",
+    "react-router-dom": "68.1",
+    "axios": "^10.4",
+    "lucide-react": "^0.263.1",
+    "class-variance-authority": "^0.70",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^1.14"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^180.2",
+    "@typescript-eslint/eslint-plugin": "^60",
+    "@typescript-eslint/parser": "^600",
+    "@vitejs/plugin-react": "^40.3",
+    "autoprefixer": "^10.414",
+    "eslint": "^8.45",
+    "eslint-plugin-react-hooks": "^40.6",
+    "eslint-plugin-react-refresh": "^0.43",
+    "postcss": "^8.427",
+    "tailwindcss": "3.3",
+    "typescript": "^502",
+    "vite": "^4.4.5"
+  },
+  "keywords": ["react", "typescript", "vite", "property", "real-estate"],
+  "author": "",
+  "license": "MIT"
+} 

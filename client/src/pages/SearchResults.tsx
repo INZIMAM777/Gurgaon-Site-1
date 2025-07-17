@@ -1,14 +1,14 @@
 import { useState, useEffect, useMemo } from "react";
 import { useSearch } from "wouter";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import PropertyCard from "@/components/PropertyCard";
-import SearchFilters from "@/components/SearchFilters";
-import { Button } from "@/components/ui/button";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import PropertyCard from "../components/PropertyCard";
+import SearchFilters from "../components/SearchFilters";
+import { Button } from "../components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MapPin, SlidersHorizontal, Grid, List, Filter, Map, Bookmark, Share2 } from "lucide-react";
-import { combinedProperties } from "@/data/properties";
-import { cn } from "@/lib/utils";
+import { combinedProperties } from "../data/properties";
+import { cn } from "../lib/utils";
 
 const SearchResults = () => {
   const search = useSearch();
